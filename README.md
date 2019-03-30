@@ -9,15 +9,15 @@ It sends the serial commands to the arduino, verifing that they are applied corr
 
 Use the below syntax to set pins to a value (0 = pull down, 1 = pull up, 2 = float)
 
-`multjump.exe 2,{pin number},{value};2,{pin number},{value};2,{pin number},{value}`
+`MULTJUMP.exe 2,{pin number},{value};2,{pin number},{value};2,{pin number},{value}`
 
 Pin 9 - float; Pin 10 - pull down; Pin 11 - float; Pin 12 - float
 
-`multjump.exe 2,9,2;2,10,0;2,11,2;2,12,2`
+`MULTJUMP.exe 2,9,2;2,10,0;2,11,2;2,12,2`
 
 Use the `/nr` flag to specify that you don't want to reboot or be asked to reboot if a change has to be made. This is useful for scripting since it will allow you check if a change has to be made to the current jumper configuration via ERRORLEVEL.
 
-`multjump.exe /nr 2,9,2;2,10,0;2,11,2;2,12,2`
+`MULTJUMP.exe /nr 2,9,2;2,10,0;2,11,2;2,12,2`
 
 **MULTJUMP.bas** is a QuickBasic 4.5 application. It **MUST** be compiled to allow ERRORLEVEL and commandline arguments to work.
 
