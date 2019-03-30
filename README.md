@@ -2,7 +2,7 @@
 ## What is it?
 **multjumpctrl** allows you to control your retro motherboard CPU multiplier and FSB jumpers. It was born out of wanting additional control to slow down DOS games without cracking open the case every time I wanted to change a jumper.
 ## How does it work?
-**multjumpctrl** uses an arduino compatible board to "pull down" motherboard jumpers via serial control. Simply connect arduino digital pins to motherboard multiplier and/or FSB headers, arduino TTL to a TTL to RS232 converter, RS232 converter to your motherboard serial header. The QuickBasic **MULTJUMP.bas** will send the commands to arduino to toggle the jumpers.
+**multjumpctrl** uses an arduino compatible board to "pull down" motherboard jumpers via serial control. Simply connect arduino digital pins to motherboard multiplier and/or FSB headers, arduino TTL to a TTL to RS232 converter, RS232 converter to your motherboard serial header. The QuickBasic 4.5 **MULTJUMP.bas** will send the commands to arduino to toggle the jumpers.
 ![alt text](https://github.com/lnxsrt/multjumpctrl/raw/master/multjump.png)
 ## How does MULTJUMP.bas work?
 It sends the serial commands to the arduino, verifing that they are applied correctly. It also can reboot the computer to activate your new jumper settings. Additionally, it will report ERRORLEVEL so that you can add it to your game start batch file to automate jumper settings for various games.
