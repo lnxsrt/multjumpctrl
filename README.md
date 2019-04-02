@@ -5,7 +5,7 @@
 **multjumpctrl** uses an arduino compatible board to "pull down" motherboard jumpers via serial control. Simply connect arduino digital pins to motherboard multiplier and/or FSB headers, arduino TTL to a TTL to RS232 converter, RS232 converter to your motherboard serial header. The QuickBasic 4.5 **MULTJUMP.bas** will send the commands to arduino to toggle the jumpers.
 ![alt text](https://github.com/lnxsrt/multjumpctrl/raw/master/multjump.png)
 ## How does MULTJUMP.bas work?
-It sends the serial commands to the arduino, verifing that they are applied correctly. It also can reboot the computer to activate your new jumper settings. Additionally, it will report ERRORLEVEL so that you can add it to your game start batch file to automate jumper settings for various games.
+It sends the serial commands to the arduino, verifing that they are applied correctly. It also can reboot the computer to activate your new jumper settings. Additionally, it will report ERRORLEVEL so that you can add it to your game start batch file to automate jumper settings.
 
 Use the below syntax to set pins to a value (0 = pull down, 1 = pull up, 2 = float)
 
@@ -15,7 +15,7 @@ Pin 9 - float; Pin 10 - pull down; Pin 11 - float; Pin 12 - float
 
 `MULTJUMP.exe 2,9,2;2,10,0;2,11,2;2,12,2`
 
-Use the `/nr` flag to specify that you don't want to reboot or be asked to reboot if a change has to be made. This is useful for scripting since it will allow you check if a change has to be made to the current jumper configuration via ERRORLEVEL.
+Use the `/nr` flag to specify that you don't want to reboot or be asked to reboot if a change has to be made. This is useful for scripting since it will allow you to check if a change has to be made to the current jumper configuration via ERRORLEVEL.
 
 `MULTJUMP.exe /nr 2,9,2;2,10,0;2,11,2;2,12,2`
 
